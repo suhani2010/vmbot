@@ -81,42 +81,37 @@ html,body{
 .wrapper .icon:hover .tooltip{
   text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
 }
-.wrapper .facebook:hover span,
-.wrapper .facebook:hover .tooltip,
-.wrapper .facebook:hover .tooltip:before{
+.wrapper .home:hover span,
+.wrapper .home:hover .tooltip,
+.wrapper .home:hover .tooltip:before{
   background: #3B5999;
 }
-.wrapper .twitter:hover span,
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip:before{
-  background: #46C1F6;
-}
-.wrapper .instagram:hover span,
-.wrapper .instagram:hover .tooltip,
-.wrapper .instagram:hover .tooltip:before{
-  background: #e1306c;
-}
-.wrapper .github:hover span,
-.wrapper .github:hover .tooltip,
-.wrapper .github:hover .tooltip:before{
-  background: #333;
-}
-.wrapper .youtube:hover span,
-.wrapper .youtube:hover .tooltip,
-.wrapper .youtube:hover .tooltip:before{
+.wrapper .contact:hover span,
+.wrapper .contact:hover .tooltip,
+.wrapper .contact:hover .tooltip:before{
   background: #DE463B;
 }
-.wrapper .facebook{
+.wrapper .profile:hover span,
+.wrapper .profile:hover .tooltip,
+.wrapper .profile:hover .tooltip:before{
+  background: #e1306c;
+}
+.wrapper .chbot:hover span,
+.wrapper .chbot:hover .tooltip,
+.wrapper .chbot:hover .tooltip:before{
+  background: #46C1F6;
+}
+.wrapper .home{
   
 margin: 15px;
 
 }
-.wrapper .github{
+.wrapper .chbot{
   
     margin: 15px;
     
     }
-    .wrapper .instagram{
+    .wrapper .profile{
   
         margin: 15px;
         
@@ -132,4 +127,8 @@ margin: 15px;
 }
 .btnn{
     border: none;
+    background-color:transparent;
+}
+#botvis{
+  display: none;
 }

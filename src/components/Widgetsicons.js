@@ -1,5 +1,10 @@
 import React, { useEffect } from 'react';
 import { Widget, addResponseMessage } from 'react-chat-widget';
+import Chatbot from 'react-chatbot-kit';
+import 'react-chatbot-kit/build/main.css';
+import MessageParser from "../chatbot/MessageParser";
+import config from "../chatbot/config";
+import ActionProvider from "../chatbot/ActionProvider";
 
 import './style.css';
 // import {myfunction} from './myfunction';
@@ -9,71 +14,78 @@ function Widgeticons() {
     const shoot = () => {
         
         var x = document.getElementById("show");
+        
         if (x.style.display === "none") {
           x.style.display = "block";
-          x.style.animation = "move-in-steps 8s infinite";
+         
         } else {
           x.style.display = "none";
         }
       }
     
-      useEffect(() => {
-        addResponseMessage('Welcome to this **awesome** chat!');
-      }, []);
-    
-      const handleNewUserMessage = (newMessage) => {
-        console.log(`New message incoming! ${newMessage}`);
-        // Now send the message throught the backend API
-      };   
-    
+     
+      const showhide = () => {
+        
+         var x = document.getElementById("botvis");
+         var y=document.getElementById("hide1");
+         if (x.style.display === "none") {
+           x.style.display = "block";
+           y.style.display = "none";
+         } else {
+           x.style.display = "none";
+           y.style.display = "block";
+         }
+       }
         
    
     return(<><div class='circle-container'>
-    <div class="wrapper center" id="show">
-         <div class="icon facebook deg0">
+    <div class="wrapper" id="show">
+       <div id="hide1">
+         <div class="tp icon home deg0">
             <div class="tooltip">
-               Facebook
+               Home
             </div>
-            <span><i class="fab fa-facebook-f"></i></span>
+            <span><i class="fas fa-home"></i></span>
          </div>
-         <div class="icon twitter deg20">
+         <div class="tp icon contact deg330">
             <div class="tooltip">
-               Twitter
+               Contact
             </div>
-            <span><i class="fab fa-twitter"></i></span>
+            <span><i class="fas fa-address-book"></i></span>
          </div>
-         <div class="icon instagram deg45">
+         <div class="tp icon profile deg300">
             <div class="tooltip">
-               Instagram
+               Profile
             </div>
-            <span><i class="fab fa-instagram"></i></span>
+            <span><i class="fas fa-user-circle"></i></span>
          </div>
-         <div class="icon github deg135">
+         </div>
+         <div id="botvis">
+      <Chatbot
+        config={config}
+        messageParser={MessageParser}
+        actionProvider={ActionProvider}
+      />
+    </div>
+         <div class="icon chbot deg135">
             <div class="tooltip">
-               Github
+               Chatbot
             </div>
-            <span><i class="fab fa-github "></i></span>
+            <button className='btnn' onClick={showhide}><span><i class="fas fa-comments "></i></span></button>
          </div>
-         <div class="deg180">
-            
-            <span><Widget
-          handleNewUserMessage={handleNewUserMessage}
-          
-          title="My new awesome title"
-          subtitle="And my cool subtitle"
-          emojis="false"
-          
-        /></span>
-         </div>
+         
       </div>
-     <div class="wrapper">
+
+      
+     <div class="wrapper center">
          <div class="icon expand">
             <div class="tooltip">
                Click 
             </div> 
-            <button className='btnn' onClick={shoot}><span><i class="fa-solid fa-expand" ></i></span></button>
+            <button className='btnn' onClick={shoot}><span><i class="fas fa-dot-circle" ></i></span></button>
          </div>
      </div>
+
      
     </div>
 </>
