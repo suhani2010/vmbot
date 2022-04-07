@@ -12,9 +12,9 @@ html,body{
   place-items: center;
   background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 }
-.wrapper{
+/* .wrapper{
   display: inline-flex;
-}
+} */
 
 .wrapper .icon{
   margin: 0 20px;
