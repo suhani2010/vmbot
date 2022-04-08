@@ -11,6 +11,17 @@ class MessageParser {
       {
         this.actionProvider.greet();
       }
+      if (lowercase.includes("enquiry")) {
+        this.actionProvider.handleEnquiry();
+      } else if (lowercase.includes("issue")) {
+        this.actionProvider.handleIssue();
+      } else if (lowercase.includes("faq")) {
+        this.actionProvider.handleFaq();
+      } else if (lowercase.includes("order")) {
+        this.actionProvider.handleOrder();
+      } else if (lowercase.includes("continue")) {
+        this.actionProvider.handleContinue();
+      } 
     }
   }
   export default MessageParser;

@@ -29,6 +29,26 @@ class ActionProvider {
   
       this.addMessageToState(message);
     };
+    handleFaq = () => {
+      const message = this.createChatbotMessage(
+        "Select an FAQ",
+        {
+          widget: "faq",
+        }
+      );
+  
+      this.addMessageToState(message);
+    };
+    handleOrder = () => {
+      const message = this.createChatbotMessage(
+        "Select Order",
+        {
+          widget: "order",
+        }
+      );
+  
+      this.addMessageToState(message);
+    };
     handleReturn = () => {
       //console.log("heloooooooooooo");
       const message = this.createChatbotMessage(
@@ -52,6 +72,17 @@ class ActionProvider {
   
       this.addMessageToState(message);
     };
+
+    handleContinue = () => {
+      const message = this.createChatbotMessage(
+        "Welcome to the menu again",
+        {
+          widget: "options"
+        }
+      );
+      this.addMessageToState(message);
+    };
+
     addMessageToState = (message) =>{
       this.setState(prevState => ({
         ...prevState, messages: [...prevState.messages, message]

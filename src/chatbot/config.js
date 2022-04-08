@@ -43,6 +43,14 @@ const config = {
       widgetName: "issue",
       widgetFunc: (props) => <Raiseissue {...props} />,
     },
+    {
+      widgetName: "faq",
+      widgetFunc: (props) => <Raiseissue {...props} />,
+    },
+    {
+      widgetName: "order",
+      widgetFunc: (props) => <Raiseissue {...props} />,
+    },
     // {
     //   widgetName: "renderissue",
     //   widgetFunc: (props) => <Issue {...props} />,

@@ -1,13 +1,13 @@
 import React from "react";
 
-import "./options.css";
+import '../Options.css';
 
 const Options = (props) => {
   const options = [
     { text: "Product Enquiry", handler: props.actionProvider.handleEnquiry, id: 1 },
     { text: "Raise an Issue", handler: props.actionProvider.handleIssue, id: 2 },
-    { text: "FAQ", handler: () => {}, id: 3 },
-    { text: "Order", handler: () => {}, id: 4 },
+    { text: "FAQ", handler: props.actionProvider.handleFaq, id: 3 },
+    { text: "Order", handler: props.actionProvider.handleOrder, id: 4 },
   ];
 
   const optionsMarkup = options.map((option) => (

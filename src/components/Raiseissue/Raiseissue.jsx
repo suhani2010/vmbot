@@ -1,5 +1,6 @@
 import React from "react";
-import './Raiseissue.css';
+import '../Options.css';
+
 const Raiseissue = (props) => {
   
   

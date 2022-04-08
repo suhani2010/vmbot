@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import RenderIssue from "./RenderIssue";
-import "./Quiz.css";
+import '../Options.css';
+
 function Issue(props) {
   const data1 = [
     {

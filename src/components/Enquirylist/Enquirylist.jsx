@@ -1,5 +1,5 @@
 import React from "react";
-import './Enquirylist.css';
+import '../Options.css';
 const Enquirylist = (props) => {
     const enquiryMarkup = props.options.map((enquiry) => (
       <li key={enquiry.id} className="enquiry-list-item">
