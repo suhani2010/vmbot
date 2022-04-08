@@ -1,13 +1,13 @@
 .options-container {
     display: flex;
+    align-items: flex-start;
     flex-wrap: wrap;
   }
   
   .option-button {
-    margin: 5px;
+    padding: 0.5rem;
     border-radius: 25px;
-    padding: 8px;
-    border-color: rgb(28, 219, 229);
     background: transparent;
-    text-align: center;
+    border: 1px solid green;
+    margin: 3px;
   }

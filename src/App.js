@@ -3,7 +3,7 @@ import { Widget, addResponseMessage } from 'react-chat-widget';
 import Draggable from 'react-draggable';
 
 import 'react-chat-widget/lib/styles.css';
-import Widgeticons from './components/Widgetsicons';
+import Widgetsicons from './components/Widgetsicons';
 
 import logo from './logo.svg';
 
@@ -13,7 +13,7 @@ function App() {
       <div className="App">
         <Draggable>
           <div>
-            <Widgeticons />
+            <Widgetsicons />
           </div>
         </Draggable>
       </div>

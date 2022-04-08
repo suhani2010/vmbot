@@ -99,8 +99,9 @@ html,body{
 .wrapper .chbot:hover span,
 .wrapper .chbot:hover .tooltip,
 .wrapper .chbot:hover .tooltip:before{
-  background: #46C1F6;
+  background:#46C1F6 ;
 }
+
 .wrapper .home{
   
 margin: 15px;
@@ -127,8 +128,12 @@ margin: 15px;
 }
 .btnn{
     border: none;
-    background-color:transparent;
+    background-color: transparent;
 }
 #botvis{
   display: none;
 }
+/* .react-chatbot-kit-chat-inner-container{
+  resize: both;
+  overflow: auto;
+} */

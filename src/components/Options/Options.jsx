@@ -1,33 +1,26 @@
 import React from "react";
 
-import "./Options.css";
+import "./options.css";
 
 const Options = (props) => {
-    const options = [
-        {
-            text: "Linux",
-            handler: props.actionProvider.handleLinuxQuiz,
-            id: 1
-        },
-        {
-            text: "Docker",
-            handler: props.actionProvider.handleDockerQuiz,
-            id: 2
-        },
-        {
-            text: "Sql",
-            handler: props.actionProvider.handleSqlQuiz,
-            id: 3
-        },
-    ];
-    const optionsList = options.map((option)=>(
-        <button key={option.id} onClick={option.handler} className="option-button">
-            {option.text}
-        </button>
-    ));
-        return <div className="options-container">
-            <p>{optionsList}</p>
-        </div>
+  const options = [
+    { text: "Product Enquiry", handler: props.actionProvider.handleEnquiry, id: 1 },
+    { text: "Raise an Issue", handler: props.actionProvider.handleIssue, id: 2 },
+    { text: "FAQ", handler: () => {}, id: 3 },
+    { text: "Order", handler: () => {}, id: 4 },
+  ];
+
+  const optionsMarkup = options.map((option) => (
+    <button
+      className="option-button"
+      key={option.id}
+      onClick={option.handler}
+    >
+      {option.text}
+    </button>
+  ));
+
+  return <div className="options-container">{optionsMarkup}</div>;
 };
 
 export default Options;

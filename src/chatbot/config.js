@@ -1,63 +1,79 @@
-import React from "react";
 import { createChatBotMessage } from 'react-chatbot-kit';
-import DogPicture from '../components/DogPicture.jsx'
-import Options from "../components/Options/Options.jsx";
-import Quiz from "../components/Quiz/Quiz"
-
+import React from 'react';
+import Options from '../components/Options/Options';
+import Enquirylist from '../components/Enquirylist/Enquirylist';
+import Raiseissue from '../components/Raiseissue/Raiseissue';
+import Issue from '../components/Raiseissue/Issue';
 const config = {
-    botName:"Beta",
-  initialMessages: [createChatBotMessage(`Hello what do you want to learn?`,{
-      widget:"options",
-    })
-  ],
-  state: {
-    linux: [],
-    sql: [],
-    docker: []
-  },
-  widgets: [
+  botName: "BetaBot",
+  initialMessages: [
+    createChatBotMessage(`Hey, I'm Chatbot your personal helper...
+
+    If you need to get help, just type or press on one of this topic`,
+  {
+    widget: "options",
+  })
+],
+ widgets: [
+     {
+     	widgetName: "options",
+    	widgetFunc: (props) => <Options {...props} />,
+     },
+     {
+      widgetName: "enquiry",
+      widgetFunc: (props) => <Enquirylist {...props} />,
+      // props: {
+      //   options: [
+      //     {
+      //       text: "Product Enquiry",
+      //       url:
+      //         "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/",
+      //       id: 1,
+      //     },
+      //     {
+      //       text: "Other Enquiry",
+      //       url:
+      //         "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
+      //       id: 2,
+      //     },
+      //   ],
+      // }
+    },
+    {
+      widgetName: "issue",
+      widgetFunc: (props) => <Raiseissue {...props} />,
+    },
     // {
-    //   widgetName: 'dogPicture',
-    //   widgetFunc: (props) => <DogPicture {...props} />,
+    //   widgetName: "renderissue",
+    //   widgetFunc: (props) => <Issue {...props} />,
+
     // },
     {
-      widgetName: 'options',
-      widgetFunc: (props) => <Options {...props} />,
-    },
-    {
-      widgetName: "linux",
-      widgetFunc: (props) => <Quiz {...props} />,
+      widgetName: "renderreturn",
+      widgetFunc: (props) => <Issue {...props} />,
       props: {
-        course: "Linux"
+        type: "Return"
       }
     },
     {
-      widgetName: "docker",
-      widgetFunc: (props) => <Quiz {...props} />,
+      widgetName: "renderorder",
+      widgetFunc: (props) => <Issue {...props} />,
       props: {
-        course: "Docker"
-      }
-    },
-    {
-      widgetName: "sql",
-      widgetFunc: (props) => <Quiz {...props} />,
-      props: {
-        course: "Sql"
+        type: "Order"
       }
     }
-  ],
+     
+ ],
   customStyles: {
     botMessageBox: {
-      backgroundColor: '#04e0d2',
+      backgroundColor: "#376B7E",
     },
     chatButton: {
-      backgroundColor: '#04e0d2',
+      backgroundColor: "#376B7E",
     },
   },
-  customComponents: {
-    // Replaces the default header
-  //  header: () => <div style={{ backgroundColor: '#03a394', padding: "5px", borderRadius: "3px",fontSize:"15px" }}>Conversation with Beta</div>
- },
+  
+ 
 };
 
 export default config;

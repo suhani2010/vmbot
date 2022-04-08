@@ -5,12 +5,13 @@ import 'react-chatbot-kit/build/main.css';
 import MessageParser from "../chatbot/MessageParser";
 import config from "../chatbot/config";
 import ActionProvider from "../chatbot/ActionProvider";
-import '../chatbot/chatStyle.css'
+
+
 import './style.css';
 // import {myfunction} from './myfunction';
 
 
-function Widgeticons() {
+function Widgetsicons() {
     const shoot = () => {
         
         var x = document.getElementById("show");
@@ -41,19 +42,19 @@ function Widgeticons() {
     return(<><div class='circle-container'>
     <div class="wrapper" id="show">
        <div id="hide1">
-         <div class="tp icon home deg0">
+         <div class="tp icon home">
             <div class="tooltip">
                Home
             </div>
-            <span><i class="fas fa-home"></i></span>
+            <button className='btnn'><span><i class="fas fa-home"></i></span></button>
          </div>
-         <div class="tp icon contact deg330">
+         <div class="tp icon contact">
             <div class="tooltip">
-               Contact
+               ContactUs
             </div>
             <span><i class="fas fa-address-book"></i></span>
          </div>
-         <div class="tp icon profile deg300">
+         <div class="tp icon profile">
             <div class="tooltip">
                Profile
             </div>
@@ -67,7 +68,7 @@ function Widgeticons() {
         actionProvider={ActionProvider}
       />
     </div>
-         <div class="icon chbot deg135">
+         <div class="icon chbot">
             <div class="tooltip">
                Chatbot
             </div>
@@ -91,4 +92,4 @@ function Widgeticons() {
 </>
 );
 }
-export default Widgeticons;
+export default Widgetsicons;
