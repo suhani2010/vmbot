@@ -19,11 +19,8 @@ function App() {
   return(<>
  <div className="App">
       <Icons />
-    
     </div>
-    
     </>
-    
   )
 }
 

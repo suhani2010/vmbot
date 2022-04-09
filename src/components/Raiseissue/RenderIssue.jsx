@@ -13,7 +13,7 @@ const RenderIssue = ({ data }) => {
     if (index < 0) setIndex(data.length - 1);
     else if (index >= data.length) 
     {
-      document.getElementById("last").innerHTML='<lable>Enter your email id : </label><input id="email" type="email" />';
+      document.getElementById("last").innerHTML='<label>Enter your email id : </label><input id="email" type="email" />';
     }
     else
      setIndex(index);

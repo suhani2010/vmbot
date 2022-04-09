@@ -4,6 +4,14 @@ import Options from '../components/Options/Options';
 import Enquirylist from '../components/Enquirylist/Enquirylist';
 import Raiseissue from '../components/Raiseissue/Raiseissue';
 import Issue from '../components/Raiseissue/Issue';
+import Faq from '../components/Faq/Faq';
+import Renderfaq from '../components/Faq/Renderfaq';
+import Midfaq from '../components/Faq/Midfaq';
+import Midorder from '../components/Order/Midorder';
+import Order from '../components/Order/Order';
+import Renderenquiry from '../components/Enquirylist/Renderenquiry';
+
+console.log("coming here");
 const config = {
   botName: "BetaBot",
   initialMessages: [
@@ -40,22 +48,64 @@ const config = {
       // }
     },
     {
+      widgetName: "enquiryAns",
+      widgetFunc: (props) => <Renderenquiry {...props} />,
+    },
+    {
       widgetName: "issue",
       widgetFunc: (props) => <Raiseissue {...props} />,
     },
     {
       widgetName: "faq",
-      widgetFunc: (props) => <Raiseissue {...props} />,
+      widgetFunc: (props) => <Faq {...props} />,
+    },
+    {
+      widgetName: "faqAns1",
+      widgetFunc: (props) => <Midfaq {...props} />,
+      props: {
+        type: "ans1"
+      }
+    },
+    {
+      widgetName: "faqAns2",
+      widgetFunc: (props) => <Midfaq {...props} />,
+      props: {
+        type: "ans2"
+      }
+    },
+    {
+      widgetName: "faqAns3",
+      widgetFunc: (props) => <Midfaq {...props} />,
+      props: {
+        type: "ans3"
+      }
+    },
+    {
+      widgetName: "faqAns4",
+      widgetFunc: (props) => <Midfaq {...props} />,
+      props: {
+        type: "ans4"
+      }
     },
     {
       widgetName: "order",
-      widgetFunc: (props) => <Raiseissue {...props} />,
+      widgetFunc: (props) => <Order {...props} />,
     },
-    // {
-    //   widgetName: "renderissue",
-    //   widgetFunc: (props) => <Issue {...props} />,
-
-    // },
+    {
+      widgetName: "orderAns1",
+      widgetFunc: (props) => <Midorder {...props} />,
+      props: {
+        type: "ans1"
+      }
+    },
+    {
+      widgetName: "orderAns2",
+      widgetFunc: (props) => <Midorder {...props} />,
+      props: {
+        type: "ans2"
+      }
+    },
+   
     {
       widgetName: "renderreturn",
       widgetFunc: (props) => <Issue {...props} />,

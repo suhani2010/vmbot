@@ -1,16 +1,28 @@
 import React from "react";
 import '../Options.css';
+
 const Enquirylist = (props) => {
-    const enquiryMarkup = props.options.map((enquiry) => (
+  
+  
+    const options = [
+      {
+        text: "Product Enquiry",
+        handler: props.actionProvider.handleEnquiryQues,
+        id: 1,
+      },
+    ]
+  
+    const enquiryMarkup = options.map((enquiry) => (
+      
       <li key={enquiry.id} className="enquiry-list-item">
-        <a
-          href={enquiry.url}
+        <button 
           target="_blank"
           rel="noopener noreferrer"
           className="enquiry-list-item-url"
+          onClick={enquiry.handler}
         >
           {enquiry.text}
-        </a>
+        </button>
       </li>
     ));
   

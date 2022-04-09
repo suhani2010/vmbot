@@ -18,7 +18,6 @@ function Icons (){
   
     return(
 <div className="App">
-        {/* <Draggable> */}
           <div>
         
         <Router>
@@ -31,9 +30,6 @@ function Icons (){
       </Routes>
     </Router> 
         </div>
-        {/* </Draggable> */}
-        
-       
       </div>);
 }
 export default Icons;

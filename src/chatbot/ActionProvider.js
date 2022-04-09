@@ -19,6 +19,16 @@ class ActionProvider {
   
       this.addMessageToState(message);
     };
+    handleEnquiryQues = () => {
+      const message = this.createChatbotMessage(
+        "Give Details",
+        {
+          widget: "enquiryAns",
+        }
+      );
+  
+      this.addMessageToState(message);
+    };
     handleIssue = () => {
       const message = this.createChatbotMessage(
         "Select an issue",
@@ -29,6 +39,24 @@ class ActionProvider {
   
       this.addMessageToState(message);
     };
+    handleOrderQues1 = () =>{
+      const message = this.createChatbotMessage("Order Steps",
+        {
+          widget: "orderAns1",
+        }
+      );
+      this.addMessageToState(message);
+      
+    }
+    handleOrderQues2 = () =>{
+      const message = this.createChatbotMessage("Order Track",
+        {
+          widget: "orderAns2",
+        }
+      );
+      this.addMessageToState(message);
+      
+    }
     handleFaq = () => {
       const message = this.createChatbotMessage(
         "Select an FAQ",
@@ -39,6 +67,45 @@ class ActionProvider {
   
       this.addMessageToState(message);
     };
+    handleFaqQues1 = () =>{
+      const message = this.createChatbotMessage("This is ans",
+        {
+          widget: "faqAns1",
+        }
+      );
+      this.addMessageToState(message);
+      
+    }
+    handleFaqQues2 = () =>{
+      const message = this.createChatbotMessage("This is ans",
+        {
+          widget: "faqAns2",
+        }
+      );
+  
+      this.addMessageToState(message);
+      
+    }
+    handleFaqQues3 = () =>{
+      const message = this.createChatbotMessage("This is ans",
+        {
+          widget: "faqAns3",
+        }
+      );
+  
+      this.addMessageToState(message);
+      
+    }
+    handleFaqQues4 = () =>{
+      const message = this.createChatbotMessage("This is ans",
+        {
+          widget: "faqAns4",
+        }
+      );
+  
+      this.addMessageToState(message);
+      
+    }
     handleOrder = () => {
       const message = this.createChatbotMessage(
         "Select Order",
