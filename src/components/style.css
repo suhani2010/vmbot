@@ -133,6 +133,13 @@ margin: 15px;
 #botvis{
   display: none;
 }
+/* .pos{
+  position: absolute;
+  display: block;  
+} */
+/* .circle-container{
+  z-index: 500;
+} */
 /* .react-chatbot-kit-chat-inner-container{
   resize: both;
   overflow: auto;

@@ -13,7 +13,7 @@ const RenderIssue = ({ data }) => {
     if (index < 0) setIndex(data.length - 1);
     else if (index >= data.length) 
     {
-      document.getElementById("last").innerHTML="<p>Please click on submit now</p>";
+      document.getElementById("last").innerHTML='<lable>Enter your email id : </label><input id="email" type="email" />';
     }
     else
      setIndex(index);
@@ -35,6 +35,8 @@ const RenderIssue = ({ data }) => {
   });
 
   function handleSubmit() {
+    console.log(document.getElementById("email").value);
+    console.log(array);
     const submit1 = !submit;
     setSubmit(submit1);
 

@@ -5,13 +5,21 @@ import 'react-chatbot-kit/build/main.css';
 import MessageParser from "../chatbot/MessageParser";
 import config from "../chatbot/config";
 import ActionProvider from "../chatbot/ActionProvider";
-
+import Home from './Home';
+import {
+   BrowserRouter as Router,
+   Routes,
+   Route,
+   Link
+ } from "react-router-dom";
 
 import './style.css';
+import Draggable from 'react-draggable';
 // import {myfunction} from './myfunction';
 
 
-function Widgetsicons() {
+function Widgeticons() {
+   
     const shoot = () => {
         
         var x = document.getElementById("show");
@@ -38,27 +46,35 @@ function Widgetsicons() {
          }
        }
         
-   
-    return(<><div class='circle-container'>
+       const linkStyle = {
+         
+         textDecoration: "none",
+         color : "#000"
+         
+       };
+       
+    return(<><Draggable>
+       
+       <div className='circle-container'>
     <div class="wrapper" id="show">
        <div id="hide1">
          <div class="tp icon home">
             <div class="tooltip">
                Home
             </div>
-            <button className='btnn'><span><i class="fas fa-home"></i></span></button>
+            <button className='btnn'><Link to="/Home" style={linkStyle}><span><i class="fas fa-home"></i></span></Link></button>
          </div>
          <div class="tp icon contact">
             <div class="tooltip">
                ContactUs
             </div>
-            <span><i class="fas fa-address-book"></i></span>
+            <button className='btnn'><Link to="/ContactUs" style={linkStyle}><span><i class="fas fa-address-book"></i></span></Link></button>
          </div>
          <div class="tp icon profile">
             <div class="tooltip">
                Profile
             </div>
-            <span><i class="fas fa-user-circle"></i></span>
+            <button className='btnn'><Link to="/Profile" style={linkStyle}><span><i class="fas fa-user-circle"></i></span></Link></button>
          </div>
          </div>
          <div id="botvis">
@@ -89,7 +105,9 @@ function Widgetsicons() {
 
      
     </div>
+    
+    </Draggable>
 </>
 );
 }
-export default Widgetsicons;
+export default Widgeticons;
