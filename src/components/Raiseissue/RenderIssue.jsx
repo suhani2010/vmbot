@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import '../Options.css';
+import axios from "axios";
 
 const RenderIssue = ({ data }) => {
   const [index, setIndex] = useState(0);
@@ -39,6 +40,14 @@ const RenderIssue = ({ data }) => {
     setSubmit(submit1);
 
     console.log(array)
+
+    axios.post('http://localhost:5000/send_mail',array)
+    .then(res=>{
+      setArray([]);
+      console.log('sent');
+    }).catch((err)=>{
+      console.log(err);
+    })
   }
   
   const handleChange = (e) => {
