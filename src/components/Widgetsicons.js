@@ -53,7 +53,10 @@ function Widgeticons() {
          
        };
        
-    return(<><Draggable>
+    return(<><Draggable
+    bounds = 'body'
+   //  bounds={{top: -600, left: -1400, right: 0, bottom: 0}}
+    >
        
        <div className='circle-container'>
     <div class="wrapper" id="show">

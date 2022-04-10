@@ -24,6 +24,7 @@ function Icons (){
         <Widgeticons />
       <Routes>
       {/* <Route exact path = '/' element={<Icons />} /> */}
+      <Route exact path = '/' element={<Home />}/>
         <Route  path = '/Home' element={<Home />}/>
         <Route path='/ContactUs' element={<ContactUs/>} />
         <Route path='/Profile' element={<Profile/>} />

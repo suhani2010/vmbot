@@ -21,20 +21,20 @@ const Renderenquiry = () => {
   //console.log(array);
 
   return (
-    <main>
+    <main><form>
       {submit === false && (
         <div className="quiz-container ">
           <div id="last">
           <div >
               
               <label>Enter your email id : </label>
-              <input id="email" type="email" />
+              <input id="email" type="email" required />
               <label>Enter your product id : </label>
               <input id="prid" type="text" />
               
               <label>Enter your product query : </label>
               <input id="prquery" type="text" />
-            
+              
           </div>
           </div>
         </div>
@@ -47,6 +47,7 @@ const Renderenquiry = () => {
         )
         }
       </div>
+      </form>
     </main>
   );
 };

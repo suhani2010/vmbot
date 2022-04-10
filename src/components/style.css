@@ -134,13 +134,28 @@ margin: 15px;
   display: none;
 }
 /* .pos{
+  
   position: absolute;
-  display: block;  
+  top: 60%;
+  left: 44%;
+  width: 320px;
+  height: 60px;
+  
 } */
-/* .circle-container{
-  z-index: 500;
-} */
+.circle-container{
+  /* top:90%;
+  left: 92%; */
+  left: 2%;
+  top: 6%;
+  position: absolute;
+  z-index: 1;
+ 
+}
+.react-chatbot-kit-chat-container{
+  width: 290px;
+}
 /* .react-chatbot-kit-chat-inner-container{
   resize: both;
   overflow: auto;
 } */
+
