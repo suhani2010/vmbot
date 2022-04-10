@@ -4,7 +4,8 @@ const Home = () =>{
     
     return(
         <>
-    <h1>This is Home Page</h1>
+    <h1  className="pos"> This is Home Page</h1>
+    <h1 className="con">Details</h1>
     {/* <Icons/> */}
     </>
     );

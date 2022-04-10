@@ -123,23 +123,41 @@ margin: 15px;
   background: #000;
 }
 #show{
-  display:none
+  /* display:none; */
+  visibility: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
   
 }
 .btnn{
     border: none;
     background-color: transparent;
 }
+#hide1{
+  display: flex;
+  flex-direction: row;
+}
 #botvis{
   display: none;
 }
-/* .pos{
+.pos{
   position: absolute;
-  display: block;  
-} */
-/* .circle-container{
-  z-index: 500;
-} */
+  top:70px 
+}
+.con
+{
+  position: absolute;
+  top:350px; 
+}
+.circle-container{
+  height: 515px;
+  display: flex;
+    align-items: end;
+}
+.center{
+  margin-bottom: 17px;
+}
 /* .react-chatbot-kit-chat-inner-container{
   resize: both;
   overflow: auto;

@@ -21,13 +21,14 @@ function Icons (){
           <div>
         
         <Router>
-        <Widgeticons />
+        
       <Routes>
       {/* <Route exact path = '/' element={<Icons />} /> */}
         <Route  path = '/Home' element={<Home />}/>
         <Route path='/ContactUs' element={<ContactUs/>} />
         <Route path='/Profile' element={<Profile/>} />
       </Routes>
+      <Widgeticons />
     </Router> 
         </div>
       </div>);
