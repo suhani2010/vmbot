@@ -24,11 +24,11 @@ function Widgeticons() {
         
         var x = document.getElementById("show");
         
-        if (x.style.display === "none") {
-          x.style.display = "block";
+        if (x.style.visibility === "hidden") {
+          x.style.visibility = "visible";
          
         } else {
-          x.style.display = "none";
+          x.style.visibility = "hidden";
         }
       }
     
@@ -38,14 +38,17 @@ function Widgeticons() {
          var x = document.getElementById("botvis");
          var y=document.getElementById("hide1");
          if (x.style.display === "none") {
-           x.style.display = "block";
+           x.style.display = "flex";
            y.style.display = "none";
          } else {
            x.style.display = "none";
-           y.style.display = "block";
+           y.style.display = "flex";
          }
        }
+      //  const doNothing = () => {
         
+
+      //  }
        const linkStyle = {
          
          textDecoration: "none",
@@ -53,7 +56,11 @@ function Widgeticons() {
          
        };
        
-    return(<><Draggable>
+    return(<><Draggable
+            // onDrag={doNothing}
+            // defaultPosition={{x: 0, y: 0}}
+            bounds={{top: -520, left: -1200, right: 0, bottom: 0}}
+    >
        
        <div className='circle-container'>
     <div class="wrapper" id="show">
